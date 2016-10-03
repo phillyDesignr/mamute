@@ -4,7 +4,7 @@
 <%@ attribute name="buttonContent" required="true"%>
 
 <c:set var="buttonContentText" value="${buttonContent}.button.content"/>
-
+<%--
 <c:if test="${env.supports('feature.facebook.login')}">
 	<a href="${facebookUrl}" class="social-button-wraper">
 		<c:set var="buttonContentLabel" value="${buttonContent}.facebook_button.label"/>
@@ -22,4 +22,4 @@
 		<span class="google-button">${t[buttonContentText]}</span>
 	</a>
 	<p class="or">&#8212; ${t['auth.or']} &#8212;</p>
-</c:if>
+</c:if> --%>
