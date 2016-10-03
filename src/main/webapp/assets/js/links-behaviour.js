@@ -8,14 +8,14 @@ $(function() {
 		if (authorCan && isAuthor) {
 			return;
 		}
-		if(!MODERATOR && required > KARMA) {
-			element.off('click');
-			element.click(function(e) {
-				e.preventDefault();
-				errorPopup(Messages.get('need.to_have') + " " + required + " " + Messages.get('reputation_score') + "!", this);
-			});
-		}
-	});
+	// 	if(!MODERATOR && required > KARMA) {
+	// 		element.off('click');
+	// 		element.click(function(e) {
+	// 			e.preventDefault();
+	// 			errorPopup(Messages.get('need.to_have') + " " + required + " " + Messages.get('reputation_score') + "!", this);
+	// 		});
+	// 	}
+	// });
 	$('.author-cant').each(function(index, element) {
 		var element = $(element);
 		var isAuthor = element.data("author");
@@ -40,5 +40,5 @@ $(function() {
 		iframe.attr("src", link.attr("href"));
 		link.parent().html(iframe);
 	});
-	
+
 });
