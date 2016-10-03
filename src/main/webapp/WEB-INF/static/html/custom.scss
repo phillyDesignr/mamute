@@ -1,4 +1,4 @@
-//compileCompressed: ./$1.css
+//compileExpanded: ./$1.css
 .big-logo {
   background-image: url(onboard-logo.svg);
 }
@@ -48,4 +48,31 @@
 }
 a.button.ask-a-question {
     border-bottom: 0;
+}
+
+#cat-sidebar {
+  &.sidebar {
+    // width: 29%;
+    // padding-left: 3.5em;
+    clear: right;
+    border-radius: 6px;
+    background-color: #3C5A76;
+    color: #7C98AE;
+  }
+  .subheader {
+    border-bottom: 1px solid #7C98AE;
+    h3 {
+      color: white;
+    }
+  }
+  .tag-brutal {
+    background-color: #FAF5E2;
+    color: #3C5A76;
+    border: 1px solid #ffffff;
+  }
+}
+
+
+.tag-brutal {
+  padding: 0.35em .5em;
 }
