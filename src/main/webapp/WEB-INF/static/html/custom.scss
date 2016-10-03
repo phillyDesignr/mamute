@@ -4,5 +4,23 @@
 }
 
 .first-header {
-    background-color: #333;
+  background-color: #333;
+}
+
+.second-header {
+  background-color: #E9E0C9;
+
+  a {
+    color: #3C5A76;
+  }
+}
+
+.user-area .nav-item a {
+  font-size: 18px;
+}
+
+.search-form .text-input {
+  border-radius: 6px;
+  height: 36px;
+  font-size: 18px;
 }
