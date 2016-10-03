@@ -5,7 +5,7 @@
 <%@attribute name="recentTags" type="java.util.List" required="true"%>
 <%@attribute name="relatedQuestions" type="java.util.List" required="false"%>
 
-<aside class="sidebar">
+<aside id="cat-sidebar" class="sidebar">
 	<c:set var="newses" value="${sidebarNews}" scope="request" />
 	<tags:brutal-include value="homeNewsList" />
 	<tags:brutal-include value="sideBarAd" />
