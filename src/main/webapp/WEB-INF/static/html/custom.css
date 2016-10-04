@@ -3,6 +3,7 @@ a {
 }
 
 .big-logo {
+  background-image: url(../../imgs/custom/onboard-logo.svg);
   background-image: url(onboard-logo.svg);
 }
 
