@@ -120,4 +120,7 @@
 			<tags:searchForm/>
 		</div>
 	</section>
+	<section id='hck-banner'>
+		<img src="imgs/custom/hckn-banner.svg" alt="" style="width:100%;">
+	</section>
 </header>

@@ -4,7 +4,19 @@
 <%@ taglib prefix="tags" tagdir="/WEB-INF/tags" %>
 <%@attribute name="tagsUsage" type="java.util.List" required="true" %>
 <div class="subheader">
-	<h3 class="title page-title">${t['tags.recent']}</h3>
+	<h3 class="title page-title">NBME:</h3>
+</div>
+<ol class="tags-usage">
+		<li class="tags-item">Human Resources</li>
+		<li class="tags-item">Finance</li>
+		<li class="tags-item">Information Technology</li>
+		<li class="tags-item">Scoring</li>
+		<li class="tags-item">Test Development</li>
+		<li class="tags-item">Other</li>
+</ol>
+
+<div class="subheader">
+	<h3 class="title page-title">${t['tags.recent']}:</h3>
 </div>
 <ol class="tags-usage">
 	<c:forEach items="${tagsUsage}" var="tagUsage">

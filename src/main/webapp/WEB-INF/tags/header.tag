@@ -89,7 +89,6 @@
 	<tags:brutal-include value="bodyTopJavascripts" />
 
 	<tags:brutal-include value="header" />
-
 	<div class="container">
 		<tags:messages messagesList="${loginRequiredMessages}" />
 		<tags:messages messagesList="${mamuteMessages}" />

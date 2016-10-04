@@ -20,16 +20,14 @@
 				${t['answer.errors.already_answered']}
 			</div>
 		</c:if>
-		<c:if test="${!hasKarmaToAnswer}">
+		<%-- <c:if test="${!hasKarmaToAnswer}">
 			<div class="message alert not-enough-karma">
-				<c:if test="${isAuthor}">
+				<%-- <c:if test="${isAuthor}">
 					${t['answer.errors.not_enough_karma.own_question'].args(linkTo[NavigationController].about, linkTo[QuestionController].newQuestion)}
 				</c:if>
 				<c:if test="${!isAuthor}">
 					${t['answer.errors.not_enough_karma'].args(linkTo[NavigationController].about, linkTo[QuestionController].newQuestion)}
-				</c:if>
-			</div>
-		</c:if>
+				</c:if> --%>
+			<<%--/div>
+		</c:if> --%>
 </c:if>
-
-

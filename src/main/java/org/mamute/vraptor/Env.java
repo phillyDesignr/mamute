@@ -4,6 +4,8 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 import javax.servlet.ServletContext;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 
 import br.com.caelum.vraptor.environment.Environment;
 
@@ -22,7 +24,15 @@ public class Env {
 	}
 
 	public String host() {
-		return env.get("host");
+		String ip = "";
+															try {
+																							ip = InetAddress.getLocalHost().getHostName();
+															} catch (UnknownHostException e) {
+																							// TODO Auto-generated catch block
+																							e.printStackTrace();
+															}
+															return "http://" + ip;
+		//return env.get("host");
 	}
 
 	public String s3Host() {

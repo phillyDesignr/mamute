@@ -10,7 +10,7 @@
 
 <c:set var="title" value="${t['tag_list.title']}"/>
 <section class="first-content content">
-	<tags:questionList recentTags="${recentTags}" 
+	<tags:questionList recentTags="${recentTags}"
 		questions="${questions}" title="${}" unansweredTagLinks="${unansweredTagLinks}"/>
 </section>
 <tags:sideBar recentTags="${recentTags}" />

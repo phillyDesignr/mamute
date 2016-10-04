@@ -1,13 +1,13 @@
 <c:if test="${question.hasTags()}">
-	<c:set var="pageTitle" 
+	<c:set var="pageTitle"
 		value="${question.mostImportantTag.name} - ${question.title}" />
 </c:if>
 <c:if test="${!question.hasTags()}">
-	<c:set var="pageTitle" 
+	<c:set var="pageTitle"
 		value="${question.title}" />
 </c:if>
-<tags:header facebookMetas="${true}" 
-	title="${pageTitle}" 
+<tags:header facebookMetas="${true}"
+	title="${pageTitle}"
 	description="${question.metaDescription}"/>
 <div class="hidden" itemprop="breadcrumb" xmlns:v="http://rdf.data-vocabulary.org/#">
 	<span typeof="v:Breadcrumb">
@@ -15,7 +15,7 @@
 			${t['menu.questions']}
 		</a>
 	</span>
-	<span>»</span>
+	<span>ï¿½</span>
 	<span typeof="v:Breadcrumb">
 		<c:if test="${question.hasTags()}">
 			<a rel="v:url" property="v:title" href="${linkTo[ListController].withTag(question.mostImportantTag.name,1)}">
@@ -23,7 +23,7 @@
 			</a>
 		</c:if>
 	</span>
-	<span>»</span>
+	<span>ï¿½</span>
 	<span typeof="v:Breadcrumb">
 		<a rel="v:url" property="v:title" href="${linkTo[QuestionController].showQuestion(question, question.title)}">
 			<c:out value="${question.title}" escapeXml="true"/>
@@ -36,14 +36,14 @@
 	<c:if test="${question.hasTags()}">
 		<tags:mainTags tagClass="main-tags-header" tagClassLi="main-tags-text" useSprite = "true" currentQuestion="${question}"/>
 	</c:if>
-	<c:if test="${markAsSolution}">
-		<p class = "banner-mark-as-solution">${t['question.banner.remember']}</p>		
+	<%-- <c:if test="${markAsSolution}">
+		<p class = "banner-mark-as-solution">${t['question.banner.remember']}</p>
 	</c:if>
-	
+
 	<c:if test="${showUpvoteBanner && !markAsSolution}">
-		<p class = "banner-mark-as-solution">${t['question.banner.upvote']}</p>		
-	</c:if>
-	
+		<p class = "banner-mark-as-solution">${t['question.banner.upvote']}</p>
+	</c:if> --%>
+
 	<tags:questionWith question="${question}" commentVotes="${commentsWithVotes}"/>
 	<div class="subheader">
 		<h2 class="title page-title">
@@ -55,8 +55,8 @@
 			<c:set var="answer" value="${entry.key}" />
 			<c:set var="vote" value="${entry.value}" />
 			<c:if test="${answer.visible || currentUser.moderator || currentUser.current.isAuthorOf(answer)}">
-				<li id="answer-${answer.id}" 
-					class="answer" 
+				<li id="answer-${answer.id}"
+					class="answer"
 					data-id="${answer.id}">
 					<tags:answerWith answer="${answer}" vote="${vote}" commentVotes="${commentsWithVotes}"/>
 				</li>
