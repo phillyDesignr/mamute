@@ -1,3 +1,7 @@
+a {
+  color: #7C98AE;
+}
+
 .big-logo {
   background-image: url(onboard-logo.svg);
 }
@@ -73,4 +77,12 @@ a.button.ask-a-question {
 
 .tag-brutal {
   padding: 0.35em .5em;
+}
+
+.answers.answered {
+  color: #4CAF50;
+}
+
+.answers {
+  color: #FF5722;
 }
